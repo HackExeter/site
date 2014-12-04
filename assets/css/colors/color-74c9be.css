@@ -1,0 +1,59 @@
+/* Links */
+a {
+    color: #99272E;
+}
+
+.si i {
+	color: #99272E;
+}
+
+
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+color: #ffffff;
+background-color: #99272E;
+}
+
+.navbar-default .navbar-nav > li > a:hover {
+color: #99272E;
+}
+
+.btn-theme {
+  background-color: #99272E;
+}
+
+.tabbable .nav-stacked > li:active, li:focus, li.active h4 {
+	color: #99272E;
+}
+
+#cta-bar:hover {
+	background: #99272E;	
+}
+
+p.capitalize:first-letter {
+	background: #99272E; 
+}
+
+.team-info {
+  background: #99272E;
+}
+
+#black i {
+	color: #99272E;
+}
+
+.progress-bar-theme {
+  background-color: #99272E;
+}
+
+.team-stat i {
+	color: #99272E;
+}
+
+.pricing-table-plan {
+	border-top: 4px solid #99272E;
+}
+
+.blog-post blockquote {
+  border-left: 4px solid #99272E;
+}
+
