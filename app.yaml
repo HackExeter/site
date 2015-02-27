@@ -5,6 +5,18 @@ api_version: 1
 threadsafe: true
 
 handlers:
+- url: /register
+  script: main.application
+- url: /list
+  script: main.application
+  login: admin
+- url: /delete
+  script: main.application
+  login: admin
+- url: /list.html
+  static_files: static/list.html
+  upload: static/list.html
+  login: admin
 - url: /(.+)
   static_files: static/\1
   upload: static/(.+)
