@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta property="og:image" content="assets/img/logo-alpha-1.jpg" />
+    <link rel="shortcut icon" href="assets/ico/favicon.png">
+
+    <title>HackExeter</title>
+
+    <link href="assets/css/hover_pack.css" rel="stylesheet">
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+
+    <link href="assets/css/main.css" rel="stylesheet">
+    <link href="assets/css/colors/color-74c9be.css" rel="stylesheet">
+    <link href="assets/css/animations.css" rel="stylesheet">
+    <link href="assets/css/font-awesome.min.css" rel="stylesheet">
+
+
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="assets/js/hover_pack.js"></script>
+    <style>
+      .glyphicon {
+        display: inline;
+      }
+      p {
+        color: #222;
+      }
+    </style>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+    <nav class="navbar navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="/">HackExeter</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Previous Events <span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="/2015-winter.html">2015 Winter</a></li>
+                <li><a href="/2014-spring.html">2014 Spring</a></li>
+              </ul>
+            </li>
+            <li><a href="/register.html">Register</a></li>
+            <li><a href="/sponsor.html">Sponsor</a></li>
+            <li><a href="/mentor.html">Mentor</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div id="white">
+        <div class="container">
+            <div class="row mt">
+                <div id="about" class="col-lg-9 col-lg-offset-1-2">
+                  <h3>Sponsoring HackExeter</h3>
+                  <p>HackExeter is a student-run STEM education event aimed towards middle-schoolers and high-schoolers who are just on the cusp of getting into computer science. Participants learn to program by creating their own project, under guidance by competition mentors, over the course of ten hours.</p>
+                    <p>We believe that one of the biggest barriers to computer science is confidence. Many students are turned away by the myth that it’s “too hard” or that they’re not a “science person.” HackExeter, in one day, gets students to make an impressive project that was their own idea. This is important to students, because it shows them that they are capable of doing the things that they want to do in computer science, not just what their teacher tells them.</p>
+                  <p>Last year, HackExeter Spring had 12 teams and 55 participants. We were very pleased by the results. When one team came in, the first thing they told us was “We don’t know what we’re doing.” By the time they left, they had made a Processing game with an amusing twist ending that won our award for the fastest-learning team. They tied for that award with an all-girls team of middle-schoolers, who had made a huge, recursive choose-your-own adventure game in Pencilcode, complete with sound and images.</p>
+                  <p>This year we expect to have between 60 and 150 participants. If you or your organisation would like to chip in, it would be greatly appreciated. Our target budget this year is $3,000 for food and prizes. You would be acknowledged on this website, at opening and closing ceremonies, and would be able to send representatives to the event if you wish. Additionally, if you are an educational organisation and have curriculum or tooling you would like us to test at the event, we will take extensive notes and provide you with feedback on your tools.</p>
+                  <p>Sound good? Get in touch at <a href="mailto:hello@hackexeter.com">hello@hackexeter.com</a>.</p>
+                </div><!-- /col-lg-8 -->
+              </div>
+            <div style="text-align: center">
+                <a href="#"><hr><img src="assets/img/logo.png" style="width:100px;"></a>
+                <br>
+                <br>
+                <small style="color:#787a7d;">Built with love by the HackExeter Team 2014</small>
+            </div>
+        </div><!-- /container -->
+    </div>
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/retina.js"></script>
+
+
+    <script>
+        $(window).scroll(function() {
+            $('.si').each(function(){
+            var imagePos = $(this).offset().top;
+
+            var topOfWindow = $(window).scrollTop();
+                if (imagePos < topOfWindow+400) {
+                    $(this).addClass("slideUp");
+                }
+            });
+        });
+    </script>
+
+    <script>
+        $(document).ready(function() {
+            $('.collapse').collapse('hide');
+    $('.collapse').on('show.bs.collapse', function() {
+        var id = $(this).attr('id');
+        $('a[href="#' + id + '"]').closest('.panel-heading').addClass('active-faq');
+    });
+    $('.collapse').on('hide.bs.collapse', function() {
+        var id = $(this).attr('id');
+        $('a[href="#' + id + '"]').closest('.panel-heading').removeClass('active-faq');
+    });
+    });
+    </script>
+
+
+
+  </body>
+</html>
