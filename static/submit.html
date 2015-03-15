@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>HackExeter</title>
+
+    <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="assets/css/main.css" rel="stylesheet">
+    <link href="assets/css/colors/color-74c9be.css" rel="stylesheet">
+    <link href="assets/css/animations.css" rel="stylesheet">
+    <link href="assets/css/font-awesome.min.css" rel="stylesheet">
+    <style>
+      body {
+        background-color: #B12C2D;
+      }
+      #middle {
+        width: 600px;
+        border-radius: 6px;
+        padding: 20px;
+        line-height: 150%;
+        background-color: #ffffff;
+      }
+      #logo {
+        width: 600px;
+      }
+    </style>
+
+  </head>
+  <body>
+    <center>
+      <img id="logo" src="assets/img/logo-white.png"/>
+    </center>
+    <div class="container" id="middle">
+      <form action="/submit">
+        <input name="file" type="file"/>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="js/register.js"></script>
+  </body>
+</html>
