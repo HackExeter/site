@@ -21,7 +21,11 @@
 
     <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
     <script src="assets/js/hover_pack.js"></script>
-
+    <style>
+      .glyphicon {
+        display: inline;
+      }
+    </style>
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -31,20 +35,47 @@
   </head>
 
   <body>
+    <nav class="navbar navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">HackExeter</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Previous Contests <span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="/2015-winter.html">2015 Winter</a></li>
+                <li><a href="/2014-spring.html">2014 Spring</a></li>
+              </ul>
+            </li>
+            <li><a href="/register.html">Register</a></li>
+            <li><a href="/sponsor.html">Sponsor</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
 
     <div id="headerwrap">
+      <div id="headerwrap-cover">
         <div class="container">
             <div class="row centered">
                 <div class="col-lg-8 col-lg-offset-2 mt">
-                    <a href="#"><img src="assets/img/logo-white.png" style="width:400px;"></a>
-                    <h1>Get ready to hack Big Red</span> </h1>
+                    <a href="#"><img src="assets/img/logo.png" style="width:400px;"></a>
+                    <h1>zero to coder in 10 hours</span> </h1>
                     <p class="mt">
                         <a href="#about" class="btn btn-cta btn-lg">LEARN MORE</a>
-                        <a href="#" target="_blank" class="btn btn-cta btn-lg" disabled>REGISTRATION IS CLOSED</a></p>
-                    <p class="info">Feb 28 - Mar 1, Exeter Campus</p>
+                        <a href="/register.html" class="btn btn-cta btn-lg">REGISTER</a>
+                        <a href="/sponsor.html" class="btn btn-cta btn-lg">SPONSOR</a>
+                    </p>
+                    <p class="info" style="color:black">
+                      <span class="glyphicon glyphicon-time"></span>May 23, 9:00 AM<br/>
+                      <span class="glyphicon glyphicon-map-marker"></span><a href="https://www.google.com/maps/place/Phillips+Exeter+Academy">Phillips Exeter Academy</a> Grainger Auditorium<br/>
+                      <span class="glyphicon glyphicon-envelope"></span><a href="mailto:hello@hackexeter.com">hello@hackexeter.com</a>
+                    </p>
                 </div>
             </div><!-- /row -->
         </div><!-- /container -->
+      </div>
     </div> <!-- /headerwrap -->
 
     <div id="white">
@@ -52,11 +83,11 @@
             <div class="row mt">
                 <div id="about" class="col-lg-9 col-lg-offset-1-2">
                     <h3>What is HackExeter?</h3>
-                    <p>Welcome to the big leagues. In 2015, HackExeter will return as the premiere high school hackathon in the Northeast. </p>
-                    <p>This year, we're bringing the most talented high school developers on the coast for a 24-hour coding marathon filled with coding, workshops, and technical talks from best in the business. We look forward to seeing you here!</p>
-                    <p>Registration for HackExeter is currently closed. Beginners and middle-schoolers are welcome to come to a second event we will hold in the Spring, and we encourage everyone to sign up next year!
-                    </p>
+                    <p>HackExeter is the place to try something new. Whether you are an artist who has an idea for an app, an experienced programmer who wants to learn Clojure, or a stargazer who thinks that learning to program would be cool, HackExeter is here with mentors, time, facilities, and food to get you through your first project.</p>
                     <hr>
+                </div><!-- /col-lg-8 -->
+                <div id="about" class="col-lg-9 col-lg-offset-1-2">
+                    <h3>FAQ</h3>
                 </div><!-- /col-lg-8 -->
                 <div class="col-lg-3 col-lg-offset-1-2">
                     <div class="panel-group" id="accordion-cat-1">
@@ -70,7 +101,7 @@
                             </div>
                             <div id="faq-cat-1-sub-1" class="panel-collapse collapse">
                                 <div class="panel-body">
-                                    All high school-aged students from any school are welcome. Middle schoolers, stay tuned for an event later in the year!
+                                  All high-school and middle-school aged students are welcome.
                                 </div>
                             </div>
                         </div>
@@ -84,8 +115,8 @@
                             </div>
                             <div id="faq-cat-1-sub-2" class="panel-collapse collapse">
                                 <div class="panel-body">
-                                    Free ninety nine!
-                                    Admission is free, food is free, and our giveaways are free for all high school students.
+                                    Nothing!
+                                    Admission is free, food is free, and our giveaways are free for everyone.
                                 </div>
                             </div>
                         </div>
@@ -99,7 +130,21 @@
                             </div>
                             <div id="faq-cat-1-sub-3" class="panel-collapse collapse">
                                 <div class="panel-body">
-                                    Anything you can build for web, mobile, Pebble, Google Glass, wearables, hardware, etc. is fair game. We'll have a limited supply of hardward hack materials to use as well. Make sure all code you work on was written at the event!
+                                  Anything you can demo. Remember, though, HackExeter is about going outside your comfort zone. Try something you don't know how to do!
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel panel-default panel-faq">
+                            <div class="panel-heading">
+                                <a data-toggle="collapse" data-parent="#accordion-cat-1" href="#faq-cat-1-sub-3">
+                                    <h4 class="panel-title">
+                                        Will there be prizes?
+                                    </h4>
+                                </a>
+                            </div>
+                            <div id="faq-cat-1-sub-3" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                    Absolutely! The teams that tried the hardest things and finished them anyway will win our grand prizes. We will be giving out a total of over $1,800 worth of prizes.
                                 </div>
                             </div>
                         </div>
@@ -117,7 +162,7 @@
                             </div>
                             <div id="faq-cat-2-sub-1" class="panel-collapse collapse">
                                 <div class="panel-body">
-                                    Yep! We will provide a free dinner, breakfast, and lunch for all attendees, plus late night snacks to keep the hacking up.
+                                    Yep! We will provide subs for lunch and pizza for dinner. If you have food allergies, email us and we'll try to work something for you.
                                 </div>
                             </div>
                         </div>
@@ -131,7 +176,7 @@
                             </div>
                             <div id="faq-cat-2-sub-2" class="panel-collapse collapse">
                                 <div class="panel-body">
-                                    Click that button up there! If signups go over capacity, we will hold a registration lottery and update the site with more information.
+                                    Click that button up there! You can register individually, with a team, or, if you are a teacher or coach, register a group for your institution. Registration is completely free.
                                 </div>
                             </div>
                         </div>
@@ -145,8 +190,22 @@
                             </div>
                             <div id="faq-cat-2-sub-3" class="panel-collapse collapse">
                                 <div class="panel-body">
-                                    Bring a laptop, phone, chargers, and anything else you want to hack on during the event. You're welcome to bring a sleeping bag as well!
+                                  Bring your laptop and a charger, along with anything else you want to hack on during the event. We may have some extra computers, but don't count on it!
                                 </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default panel-faq">
+                        <div class="panel-heading">
+                            <a data-toggle="collapse" data-parent="#accordion-cat-2" href="#faq-cat-2-sub-3">
+                                <h4 class="panel-title">
+                                    Can I start work beforehand?
+                                </h4>
+                            </a>
+                        </div>
+                        <div id="faq-cat-2-sub-3" class="panel-collapse collapse">
+                            <div class="panel-body">
+                                Sure! If you're shooting for a prize, though, keep in mind that you will only be scored on the things you added during the event.
                             </div>
                         </div>
                     </div>
@@ -157,13 +216,13 @@
                             <div class="panel-heading">
                                 <a data-toggle="collapse" data-parent="#accordion-cat-3" href="#faq-cat-3-sub-1">
                                     <h4 class="panel-title">
-                                        Will there be travel reimbursements?
+                                        How will we be scored?
                                     </h4>
                                 </a>
                             </div>
                             <div id="faq-cat-3-sub-1" class="panel-collapse collapse">
                                 <div class="panel-body">
-                                    We plan to provide a few coach buses to pick up attendees on the East Coast at certain pickup locations. Stay tuned for updates!
+                                    HackExeter will score you on much more than just your finished product. Our mentors and judges will check in with you periodically, and your time management, teamwork, and sportsmanship will affect your score. You'll recieve some scoring guidelines on contest day.
                                 </div>
                             </div>
                         </div>
@@ -171,13 +230,13 @@
                             <div class="panel-heading">
                                 <a data-toggle="collapse" data-parent="#accordion-cat-3" href="#faq-cat-3-sub-2">
                                     <h4 class="panel-title">
-                                        Do I need to know how to code?
+                                        I can't really code.
                                     </h4>
                                 </a>
                             </div>
                             <div id="faq-cat-3-sub-2" class="panel-collapse collapse">
                                 <div class="panel-body">
-                                    No, but getting started before HackExeter might help! We will have workshops and mentors to help you build your first website or app here if you want.
+                                    Perfect! Come learn. We will be here with plenty of mentors and guidance to get you started and finished. If you make something cool, there's a very good chance you could win!
                                 </div>
                             </div>
                         </div>
@@ -185,31 +244,46 @@
                             <div class="panel-heading">
                                 <a data-toggle="collapse" data-parent="#accordion-cat-3" href="#faq-cat-3-sub-3">
                                     <h4 class="panel-title">
-                                        How will teams work?
+                                      Do I need a team?
                                     </h4>
                                 </a>
                             </div>
                             <div id="faq-cat-3-sub-3" class="panel-collapse collapse">
                                 <div class="panel-body">
-                                    Work on teams of up to four to build your hack during the event. If you don't have a team, just come a little early and we'll help you find people to work with!
+                                    You can work alone, or in a team of up to four people. If you don't have a team, and would like one, come a little early and we'll help you find people to work with!
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div><!-- /col-lg-3 -->
                 <div id="schedule" class="col-lg-9 col-lg-offset-1-2">
+                  <hr>
                   <h3>Schedule</h3>
+                  <center>
+                    <p>
+                      HackExeter will take place on May 23, 2015.
+                    </p>
+                  </center>
                   <table class="table">
-                    <tr><td>3:00pm - 3:30pm</td><td>Opening Ceremony</td></tr>
-                    <tr><td>3:30pm - 5:30pm</td><td>Hacking</td></tr>
-                    <tr><td>5:30pm - 7:00pm</td><td>Dinner offered</td></tr>
-                    <tr><td>7:00pm - 7:30am</td><td>Hacking</td></tr>
-                    <tr><td>7:30am - 9:00am</td><td>Light Breakfast offered</td></tr>
-                    <tr><td>9:00am - 11:30am</td><td>Hacking</td></tr>
-                    <tr><td>11:30am - 1:00pm</td><td>Lunch offered.  Submissions are open.</td></tr>
-                    <tr><td>1:00pm - 2:30pm</td><td>Submissions closed.  Judging begins.</td></tr>
-                    <tr><td>2:30pm - 3:00pm</td><td>Awards and Closing Ceremony</td></tr>
+                    <tr><td>9:00pm - 9:30pm</td><td>Registration</td></tr>
+                    <tr><td>9:30pm - 10:15pm</td><td>Opening ceremony</td></tr>
+                    <tr><td>10:15pm</td><td>Hacking begins</td></tr>
+                    <tr><td>Noon</td><td>Lunch served</td></tr>
+                    <tr><td>6:00pm</td><td>Dinner served</td></tr>
+                    <tr><td>8:15pm</td><td>Final submissions due; hacking ends</td></tr>
+                    <tr><td>8:15pm - 9:15pm</td><td>Final product judging</td></tr>
+                    <tr><td>9:15pm - 10:00pm</td><td>Closing ceremonies</td></tr>
                   </table>
+                  <hr/>
+                </div>
+                <div id="sponsors" class="col-lg-9 col-lg-offset-1-2">
+                  <h3>Sponsors</h3>
+                  <center>
+                    <p>
+                      <a href="/sponsor.html" class="btn btn-large btn-cta">SPONSOR US</a><br/>
+                      You are helping to educate the next generation of programmers.
+                    </p>
+                  </center>
                 </div>
             </div>
         </div><!-- /container -->

@@ -206,9 +206,8 @@ p.capitalize:first-letter {
 
 /* Button Call To Action */
 .btn-cta {
-  	color: #ffffff;
-	background-color: transparent;
-	border-color: #ffffff;
+	color: #CCC;
+  background-color: #99272E;
 	font-family: 'Roboto', "Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-size: 12px;
 	font-weight: 400;
@@ -230,9 +229,7 @@ p.capitalize:first-letter {
 .btn-cta:active,
 .btn-cta.active,
 .open .dropdown-toggle.btn-cta {
-  color: #99272E;
-  background-color: #ffffff;
-  border-color: #fff;
+  color: #FFF;
 }
 
 .btn-signup {
@@ -270,9 +267,9 @@ p.capitalize:first-letter {
 /* ================== MAIN WRAP SECTIONS ================== */
 
 #headerwrap {
-	background: url(../img/bg01.jpg) no-repeat center top;
+	background: url(../../spring-splash.jpg) no-repeat center top;
+  filter: grayscale(100%);
 	margin-top: 0px;
-	padding-top: 50px;
 	background-attachment: relative;
 	background-position: center center;
 	min-height: 600px;
@@ -289,20 +286,29 @@ p.capitalize:first-letter {
     background-size: cover;
 }
 
+#headerwrap-cover {
+  background: rgba(256, 256, 256, 0.6);
+	padding-top: 100px;
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 600px;
+  height: 100%;
+}
+
 #headerwrap h1 {
 	margin-top: 60px;
-	color: white;
+	color: #99272E;
 	font-size: 56px;
 	line-height: 110%;
 	font-weight: 100;
 }
 
 #headerwrap h2 {
-	color: white;
+	color: black;
 }
 
-#headerwrap span {
-	display: block;
+#headerwrap span.glyphicon {
+  margin-right: 5px;
 }
 
 #headerwrap .img-responsive {
