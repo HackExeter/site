@@ -267,7 +267,7 @@ p.capitalize:first-letter {
 /* ================== MAIN WRAP SECTIONS ================== */
 
 #headerwrap {
-	background: url(../../spring-splash.jpg) no-repeat center top;
+	background: url(../img/spring-splash.jpg) no-repeat center top;
   filter: grayscale(100%);
 	margin-top: 0px;
 	background-attachment: relative;
