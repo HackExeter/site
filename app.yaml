@@ -19,6 +19,8 @@ handlers:
   static_files: static/list.html
   upload: static/list.html
   login: admin
+- url: /bower_components
+  static_dir: static/bower_components
 - url: /(.+)
   static_files: static/\1
   upload: static/(.+)
