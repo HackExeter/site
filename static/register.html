@@ -41,6 +41,9 @@
         background-color: #ffffff;
         margin-bottom: 50px;
       }
+      #real-registration, #pre-registration {
+        display: none;
+      }
       #memberslist {
         margin-bottom: 5px;
       }
@@ -84,11 +87,12 @@
       <img id="logo" src="assets/img/logo.png"/>
     </center>
     <div class="container" id="middle">
-        <center>
-          <h1>
-            Register
-          </h1>
-        </center>
+      <center>
+        <h1>
+          Register
+        </h1>
+      </center>
+      <div id="real-registration">
         <h2>Contact Info</h2>
         <p>One person we can contact about logistics</p>
         <div class="input-group spaced">
@@ -113,13 +117,21 @@
         <button class="btn btn-secondary btn-sm" id="addmember"><span class="glyphicon glyphicon-plus" style="opacity:0.7"></span></button>
         <br/><br/>
         <p>
-        If you need to change your information later, email us at <a href="mailto:hello@hackexeter.com">hello@hackexeter.com</a>.
+        If you need to change your information later, email us at <a href="mailto:info@hackexeter.com">info@hackexeter.com</a>.
         </p>
         <button class="btn btn-primary btn-lg pull-right" id="signup">Register</button>
       </div>
+      <div id="pre-registration">
+        <p>
+          Registration for HackExeter 2015 will open in a few weeks.
+        </p>
+        <input type="text" class="form-control" id="interest-email" placeholder="Your email"/><br/>
+        <button class="btn btn-primary" id="interest-signup">Tell me when registration opens</button>
+      </div>
+    </div>
 
-      <script src="bower_components/jquery/dist/jquery.min.js"></script>
-      <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-      <script src="js/register.js"></script>
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="js/register.js"></script>
   </body>
 </html>

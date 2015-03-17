@@ -14,45 +14,10 @@ class Record(ndb.Model):
     members = ndb.StringProperty(repeated=True)
     timestamp = ndb.DateTimeProperty(auto_now_add=True)
 
-'''
-class SubmissionRecord(ndb.Model):
-    team_name = ndb.StringProperty(indexed=True)
-    serve_url = ndb.StringProperty(indexed=False)
-
-class GetUploadUrlHandler(webapp2.RequestHandler):
-    def get(self):
-        self.response.out.write(blobstore.create_upload_url('/upload'))
-
-class UploadHandler(blobstore_handlers.BlobstoreUploadHandler):
-    def post(self):
-        name = self.request.get('team_name')
-        blob = self.get_uploads('file')[0]
-        serve_url = '/get_blob/' + blob.key()
-
-        record = SubmissionRecord(
-            team_name = name,
-            serve_url = serve_url
-        )
-
-        record.put()
-
-        self.response.write({
-            "success": True
-        })
-
-class GetDownloadUrlHandler(webapp2.RequestHandler):
-    def get(self):
-        name = self.request.get('team_name')
-        query = SubmissionRecord.query(SubmissionRecord.team_name == name)
-        self.response.write({
-            "download_url": query.fetch()[0].serve_url
-        })
-
-class DownloadHandler(blobstore_handlers.BlobstoreDownloadHandler):
-    def get(self, resource):
-        resource = str(urllib.unquote(resource))
-        self.send_blob(blobstore.BlobInfo.get(resource))
-'''
+# InterestedRecord
+# A record of a pre-signup interest thing
+class InterestedRecord(ndb.Model):
+    email = ndb.StringProperty(indexed=False)
 
 # RegistrationHandler
 # The handler that listens on /register
@@ -77,6 +42,24 @@ class RegistrationHandler(webapp2.RequestHandler):
             'success': True
         }))
 
+# InterestedHandler
+# Handler that listens on /interested
+# for pre-registration interest submissions
+class InterestedHandler(webapp2.RequestHandler):
+    def get(self):
+
+        # Create and insert a record
+        # for this registration.
+        record = InterestedRecord(parent=ndb.Key('Interested', 'default'))
+        record.email = self.request.get('email')
+        record.put()
+
+        # Inform the client of success.
+        self.response.headers['Content-Type'] = 'application/json'
+        self.response.write(json.dumps({
+            'success': True
+        }))
+
 class ListHandler(webapp2.RequestHandler):
     def get(self):
         query = Record.query(Record.timestamp > datetime.datetime(2015, 1, 1))
@@ -91,10 +74,17 @@ class ListHandler(webapp2.RequestHandler):
                 "timestamp": record.timestamp.strftime("%s")
             })
 
+        query = InterestedRecord.query()
+        interested = []
+
+        for record in query:
+            interested.append(record.email)
+
         # Inform the client of success.
         self.response.headers['Content-Type'] = 'application/json'
         self.response.write(json.dumps({
-            "records": records
+            "records": records,
+            "interested": interested
         }))
 
 class DeleteHandler(webapp2.RequestHandler):
@@ -115,10 +105,7 @@ class DeleteHandler(webapp2.RequestHandler):
 
 application = webapp2.WSGIApplication([
     ('/register', RegistrationHandler),
+    ('/interested', InterestedHandler),
     ('/list', ListHandler),
-    #('/upload', UploadHandler),
-    #('/download', DownloadHandler),
-    #('/get_upload_url', GetUploadUrlHandler),
-    #('/get_download_url', GetDownloadUrlHandler),
     ('/delete', DeleteHandler)
 ], debug=True)
