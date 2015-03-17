@@ -7,6 +7,8 @@ threadsafe: true
 handlers:
 - url: /register
   script: main.application
+- url: /interested
+  script: main.application
 - url: /list
   script: main.application
   login: admin
