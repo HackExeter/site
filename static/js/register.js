@@ -29,8 +29,8 @@
           'members': JSON.stringify(inputs.map(function(x) { return x.value; }))
         },
         success: function() {
-          // Redirect
-          location.href = '/';
+          $('#real-registration').hide();
+          $('#post-registration').show();
         }
       });
     });

@@ -65,7 +65,35 @@
                 <div id="about" class="col-lg-9 col-lg-offset-1-2">
                   <h3>Mentoring at HackExeter</h3>
                   <p>HackExeter needs lots of mentors! Ideally, we will have more mentors than teams. Note that mentorship at HackExeter will be relatively involved; you may be responsible for a team, whom you will have to get through the end of their project no matter what. If a team does not know how to program, you will need to be able to teach prepared lessons on a language that suits their project.</p>
-                  <p>Interested? Get in touch at <a href="contact@hackexeter.com">contact@hackexeter.com</a>.</p>
+                  <p>Mentors can be students or teachers of any age, but should have had some experience teaching or tutoring.</p>
+                  <h3>Register as a Mentor</h3>
+                  <div id='registration'>
+                    <b>Name</b>
+                    <input type="text" class="form-control" id="name" placeholder="Sensei Bob"/>
+                    <b>Email</b>
+                    <input type="text" class="form-control" id="email" placeholder="bob@example.com"/>
+                    <b>T-Shirt Size</b>
+                    <select class="form-control" id="name">
+                      <option value="S">Adult S</option>
+                      <option value="M">Adult M</option>
+                      <option value="L">Adult L</option>
+                      <option value="XL">Adult XL</option>
+                    </select>
+                    <b>What languages and platforms are you familiar with?</b>
+                    <textarea class="form-control" id="languages" placeholder="I teach with Scratch and AppInventor, and myself can work in server-side Python and Java."></textarea>
+                    <div id="languages-chars"></div>
+                    <b>Describe your teaching experience.</b>
+                    <textarea class="form-control" id="experience" placeholder="I teach Scratch third graders at a summer camp for two weeks every year, and do a weekly AppInventor afterschool club with ninth graders at my school."></textarea>
+                    <div id="experience-chars"></div><br/>
+                    <button id="register" class="btn btn-large btn-primary">Register</button>
+                  </div>
+                  <div id="thank-you" style="display:none">
+                    <center>
+                      <h2>Thank you!</h2>
+                      <p>Your registration has been received.</p>
+                    </center>
+                  </div>
+                  <p>Email us at <a href="mailto:contact@hackexeter.com">contact@hackexeter.com</a> with any questions or to change your information.</p>
                 </div><!-- /col-lg-8 -->
               </div>
             <div style="text-align: center">
@@ -83,7 +111,7 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="assets/js/bootstrap.min.js"></script>
     <script src="assets/js/retina.js"></script>
-
+    <script src="js/mentor.js"></script>
 
     <script>
         $(window).scroll(function() {

@@ -5,7 +5,17 @@ api_version: 1
 threadsafe: true
 
 handlers:
+- url: /add_note
+  script: main.application
+- url: /get_score
+  script: main.application
+- url: /create_score_team
+  script: main.application
+- url: /list_score_teams
+  script: main.application
 - url: /register
+  script: main.application
+- url: /register_mentor
   script: main.application
 - url: /interested
   script: main.application
